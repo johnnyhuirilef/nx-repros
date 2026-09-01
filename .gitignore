@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.nx/
+*.log
+
+# generated at postinstall: it embeds an absolute transformer path
+**/apps/demo/project.json
