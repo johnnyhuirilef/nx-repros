@@ -1,0 +1,34 @@
+{
+  "name": "demo",
+  "projectType": "application",
+  "sourceRoot": "apps/demo/src",
+  "targets": {
+    "build-webpack": {
+      "executor": "@nx/webpack:webpack",
+      "options": {
+        "webpackConfig": "apps/demo/webpack.config.js",
+        "main": "apps/demo/src/main.ts",
+        "tsConfig": "apps/demo/tsconfig.json",
+        "outputPath": "dist/webpack",
+        "target": "node",
+        "compiler": "tsc",
+        "outputHashing": "none",
+        "optimization": false,
+        "transformers": [{ "name": "marker-transformer" }]
+      }
+    },
+    "build-rspack": {
+      "executor": "@nx/rspack:rspack",
+      "options": {
+        "rspackConfig": "apps/demo/rspack.config.js",
+        "main": "apps/demo/src/main.ts",
+        "tsConfig": "apps/demo/tsconfig.json",
+        "outputPath": "dist/rspack",
+        "target": "node",
+        "outputHashing": "none",
+        "optimization": false,
+        "transformers": [{ "name": "marker-transformer" }]
+      }
+    }
+  }
+}

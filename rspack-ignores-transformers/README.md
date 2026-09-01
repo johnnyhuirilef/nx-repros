@@ -94,15 +94,17 @@ more traffic over time.
 
 ## Notes for anyone extending this repro
 
-Two details cost time:
+Three details cost time:
 
 - Nx resolves a transformer `name` with `require.resolve`, so a
-  workspace-relative path never matches. `tools/write-project-json.js` writes an
-  absolute path at postinstall time.
+  workspace-relative path never matches. `tools/` is therefore a local package
+  named `marker-transformer`, linked through `file:tools`.
 - The rspack config must use `composePlugins(withNx(), ...)`. If
   `rspack.config.js` exports a plain object, `getRspackConfigs` returns it
   unchanged and discards the generated config, and the build fails with
   `Entry is required`.
+- Nx obeys `.gitignore` when it looks for projects. An ignored `project.json`
+  makes `nx show projects` return `[]`.
 
 ## Versions
 

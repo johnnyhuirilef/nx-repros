@@ -4,7 +4,6 @@
   "private": true,
   "description": "@nx/rspack:rspack declares a transformers option and never reads it",
   "scripts": {
-    "postinstall": "node tools/write-project-json.js",
     "build": "nx build-webpack demo --skip-nx-cache && nx build-rspack demo --skip-nx-cache",
     "check": "node tools/check.js",
     "scan": "node tools/scan-sources.js"
@@ -14,6 +13,7 @@
     "@nx/webpack": "23.1.3",
     "@rspack/core": "2.2.1",
     "@types/node": "22.10.2",
+    "marker-transformer": "file:tools",
     "nx": "23.1.3",
     "typescript": "5.9.3"
   }
