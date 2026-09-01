@@ -1,5 +1,7 @@
 # `@nx/rspack:rspack` accepts a `transformers` option it never runs
 
+Reported as [nrwl/nx#36875](https://github.com/nrwl/nx/issues/36875).
+
 The `@nx/rspack:rspack` executor declares a `transformers` option in its
 schema. Nothing in the package ever reads it. The build prints no warning, exits
 0, and reports `Rspack compiled successfully` — while the TypeScript transformer

@@ -8,4 +8,4 @@ versions, and a README with the exact commands and the output to expect.
 
 | Directory | Issue | What it shows |
 |---|---|---|
-| [`rspack-ignores-transformers`](./rspack-ignores-transformers) | *(pending)* | `@nx/rspack:rspack` declares a `transformers` option and never reads it — the build reports success while the transformer never runs |
+| [`rspack-ignores-transformers`](./rspack-ignores-transformers) | [#36875](https://github.com/nrwl/nx/issues/36875) | `@nx/rspack:rspack` declares a `transformers` option and never reads it — the build reports success while the transformer never runs |
