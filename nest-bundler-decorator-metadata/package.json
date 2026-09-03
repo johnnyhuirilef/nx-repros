@@ -1,0 +1,40 @@
+{
+  "name": "nest-bundler-decorator-metadata",
+  "version": "1.0.0",
+  "description": "@nx/nest hardcodes webpack; esbuild would build a Nest app that boots and then answers 500",
+  "scripts": {
+    "build": "node tools/build-all.js",
+    "check": "node tools/check.js"
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "@nestjs/schematics": "^11.0.0",
+    "@nestjs/testing": "^11.0.0",
+    "@nx/esbuild": "^23.2.0",
+    "@nx/js": "23.2.0",
+    "@nx/nest": "^23.2.0",
+    "@nx/node": "^23.2.0",
+    "@nx/rspack": "^23.2.0",
+    "@nx/web": "23.2.0",
+    "@nx/webpack": "^23.2.0",
+    "@rspack/cli": "^2.2.2",
+    "@rspack/core": "^2.2.2",
+    "@swc/helpers": "~0.5.18",
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.28.2",
+    "nx": "^23.2.0",
+    "tslib": "^2.3.0",
+    "typescript": "~6.0.3",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^7.0.0",
+    "webpack-dev-server": "^5.2.1"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "reflect-metadata": "^0.2.0",
+    "rxjs": "^7.8.0"
+  },
+  "private": true
+}
