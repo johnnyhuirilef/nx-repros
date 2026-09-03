@@ -1,5 +1,7 @@
 # `@nx/nest:application` hardcodes webpack, and esbuild would break the app
 
+Reported as [nrwl/nx#36913](https://github.com/nrwl/nx/issues/36913).
+
 `@nx/nest:application` sets its bundler to webpack and offers no way to change
 it. The option is absent from the schema, and the schema sets
 `"additionalProperties": false`, so `--bundler=esbuild` is rejected rather than
